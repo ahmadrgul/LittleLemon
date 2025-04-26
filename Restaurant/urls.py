@@ -8,7 +8,7 @@ from rest_framework.authtoken.views import obtain_auth_token
 
 urlpatterns = [
     path('', views.index),
-    path('menu', views.MenuItemView.as_view(), 'menu-items-all'),
+    path('menu', views.MenuItemView.as_view(), name='menu-items-all'),
     path('menu/<int:pk>', views.SingleMenuItemView.as_view()),
     # path('booking/', include(router.urls)),
     path('api-token-auth/', obtain_auth_token),
